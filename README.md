@@ -1,4 +1,4 @@
-# DevOps Internship Task 7: Netdata Monitoring on Ubuntu EC2
+# Task 7: Netdata Monitoring on Ubuntu EC2
 
 ## Objective
 
