@@ -27,7 +27,7 @@ Deployed Netdata, a lightweight, open-source monitoring tool, on an AWS EC2 inst
 
 - Connected via SSH
   
- ssh -i task7-key.pem ubuntu@<public-ip>
+   ssh -i task7-key.pem ubuntu@<your-ec2-public-ip>
  
 
 ## 2. Install Docker
