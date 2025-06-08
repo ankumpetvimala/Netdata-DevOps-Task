@@ -72,7 +72,7 @@ docker run -d --name=netdata \
 ````
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 ````
-##Q7: How does Netdata alerting work?
+## Q7: How does Netdata alerting work?
 Alert Mechanism:
 - Threshold-based alert rules (/etc/netdata/health.d/)
 - Multi-tier severity levels (Critical/Warning)
@@ -84,7 +84,7 @@ Alert Mechanism:
 - Silence/acknowledge functionality
 - Historical alert database
 
-Q8: What is a dashboard in this context?
+## Q8: What is a dashboard in this context?
 Dashboard Features:
 - Real-time monitoring interface
 - Component breakdown:
