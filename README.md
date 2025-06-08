@@ -1,5 +1,7 @@
 # DevOps Internship Task 7: Netdata Monitoring on Ubuntu EC2
 
+## Objective
+
 Deployed Netdata, a lightweight, open-source monitoring tool, on an AWS EC2 instance running Ubuntu 22.04 to monitor system and application performance metrics. Documented the process for submission as part of a DevOps internship task.
 
 ##  Tools Used
@@ -24,41 +26,41 @@ Deployed Netdata, a lightweight, open-source monitoring tool, on an AWS EC2 inst
   - Port **19999** – Netdata Dashboard
 
 - Connected via SSH
-ssh -i task7-key.pem ubuntu@<your-ec2-public-ip>
+  
+  ssh -i task7-key.pem ubuntu@<your-ec2-public-ip>
 
-2. Install Docker
+## 2. Install Docker
 
 - Update system
 
-sudo apt update && sudo apt upgrade -y
+  sudo apt update && sudo apt upgrade -y
 
 - Install Docker
 
-sudo apt install -y docker.io
-
+  sudo apt install -y docker.io
 
 - Start and enable Docker:
 
-sudo systemctl start docker
+  sudo systemctl start docker
 
-sudo systemctl enable docker
+  sudo systemctl enable docker
 
 - Add your user to Docker group:
 
-sudo usermod -aG docker ubuntu
+  sudo usermod -aG docker ubuntu
 
 
-3. Deploy Netdata with Docker
+## 3. Deploy Netdata with Docker
 
 - Run Netdata container:
 
-docker run -d --name=netdata -p 19999:19999 netdata/netdata
+  docker run -d --name=netdata -p 19999:19999 netdata/netdata
 
 - Check container status:
 
-docker ps
+  docker ps
 
-4.  Access Netdata Dashboard
+## 4. Access Netdata Dashboard
 
    - Accessed at: http://:19999
    - Monitored metrics:
