@@ -27,25 +27,30 @@ Deployed Netdata, a lightweight, open-source monitoring tool, on an AWS EC2 inst
 
 - Connected via SSH
   
-  ssh -i task7-key.pem ubuntu@<your-ec2-public-ip>
+ ssh -i task7-key.pem ubuntu@<public-ip>
+ 
 
 ## 2. Install Docker
 
 - Update system
 
+
   sudo apt update && sudo apt upgrade -y
 
 - Install Docker
+
 
   sudo apt install -y docker.io
 
 - Start and enable Docker:
 
-  sudo systemctl start docker
 
-  sudo systemctl enable docker
+   sudo systemctl start docker
+  
+   sudo systemctl enable docker
 
 - Add your user to Docker group:
+
 
   sudo usermod -aG docker ubuntu
 
@@ -53,10 +58,13 @@ Deployed Netdata, a lightweight, open-source monitoring tool, on an AWS EC2 inst
 ## 3. Deploy Netdata with Docker
 
 - Run Netdata container:
+  
 
   docker run -d --name=netdata -p 19999:19999 netdata/netdata
+  
 
 - Check container status:
+
 
   docker ps
 
